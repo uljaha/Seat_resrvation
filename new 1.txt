@@ -1,0 +1,7 @@
+create database example;
+use example;
+create table users(userid varchar(10),
+pass varchar(10),
+primary key(userid));
+insert into users values('root','root');
+commit;

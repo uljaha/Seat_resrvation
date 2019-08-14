@@ -1,0 +1,11 @@
+
+
+create or replace trigger test_trigger
+before select
+on bus
+for each row 
+BEGIN
+    IF :new.Day > sysdate THEN
+         RAISE_APPLICATION_ERROR(-20950, 'date error');
+    END IF;
+END;
